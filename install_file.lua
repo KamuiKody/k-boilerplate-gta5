@@ -1,7 +1,7 @@
 -- This file will be blank after initial install
 local grabImage = function(imgLink)
     local image = imgLink:match(".+/([^/]+)$")
-    local filename = GetResourcePath(Config.Inventory or 'qb-inventory'):gsub('//', '/')..'/html/images/'..image
+    local filename = GetResourcePath('qb-inventory'):gsub('//', '/')..'/html/images/'..image
     PerformHttpRequest(imgLink, function(Error, Result, _)
         if Error == 404 then
             return print("oh no the internet died")
