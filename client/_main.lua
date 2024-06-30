@@ -1,4 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
 local listener = false
 
 local function reduceFocus()
@@ -23,15 +22,3 @@ local function openUI(data, bool)
 	listener = true
 	CreateThread(listenForKeyPress)
 end
-
-RegisterNetEvent('QBCore:Client:UpdateObject', function()
-	QBCore = exports['qb-core']:GetCoreObject()
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-
-end)
-
-CreateThread(function()
-
-end)
